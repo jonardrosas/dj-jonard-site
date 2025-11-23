@@ -4,8 +4,8 @@ After=network.target
 
 [Service]
 Type=simple
-WorkingDirectory=/home/bitnami/ng-mantis3/dj-backend/dj_project
-ExecStart=/home/bitnami/ng-mantis3/dj-backend/env/bin/gunicorn --workers 3 --env DJANGO_SETTINGS_MODULE=dj_project.settings dj_project.wsgi
+WorkingDirectory=/var/www/html/dj-jonard-site/dj_project
+ExecStart=/var/www/html/dj-jonard-site/env/bin/gunicorn --workers 3 --bind 0.0.0.0:8088 --env DJANGO_SETTINGS_MODULE=config.settings.production config.wsgi
 Restart=on-failure
 
 [Install]
