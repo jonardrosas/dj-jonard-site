@@ -1,0 +1,22 @@
+{
+  "vim.enableNeovim": true,
+  "python.analysis.indexing": true,
+  "python.analysis.autoImportCompletions": true,
+  "python-envs.pythonProjects": [],
+  "python.defaultInterpreterPath": "/home/jonard/Projects/jonard-site/backend/env/bin/python",
+  "python.languageServer": "Pylance",
+  "pylint.cwd": "/home/jonard/Projects/jonard-site/backend/dj_project",
+  "pylint.importStrategy": "fromEnvironment",
+  "pylint.args": [
+    "--load-plugins",
+    "pylint_django",
+    "--django-settings-module=dj_project.settings",
+    "--disable=C0111"
+  ],
+  "black-formatter.cwd": "/home/jonard/Projects/jonard-site/backend/dj_project",
+  "black-formatter.importStrategy": "fromEnvironment",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "tailwindCSS.lint.invalidConfigPath": "ignore",
+  "python.analysis.typeCheckingMode": "basic"
+}

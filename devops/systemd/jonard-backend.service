@@ -1,0 +1,12 @@
+[Unit]
+Description=Jonard-Site : Gunicorn Service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/bitnami/ng-mantis3/dj-backend/dj_project
+ExecStart=/home/bitnami/ng-mantis3/dj-backend/env/bin/gunicorn --workers 3 --env DJANGO_SETTINGS_MODULE=dj_project.settings dj_project.wsgi
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
