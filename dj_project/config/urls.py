@@ -23,6 +23,7 @@ from apps.home.views import HomePage
 urlpatterns = [
     # path("admin/", admin.site.urls),
     path("accounts/", include("apps.accounts.urls")),
+    path("site_app/", include("apps.site_app.urls")),
     path("", HomePage.as_view(), name="home"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

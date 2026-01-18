@@ -56,6 +56,8 @@ INSTALLED_APPS = [
     "corsheaders",
     "apps.accounts",
     "apps.home",
+    "apps.site_app",
+    "core",
 ]
 
 MIDDLEWARE = [
@@ -239,5 +241,8 @@ EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
 AUTH_USER_MODEL = "accounts.User"
 IS_PROD = env("IS_PROD", default=False)
 SILENCED_SYSTEM_CHECKS = ["models.E007"]
+
+PORKBUN_SECRETAPIKEY = env("PORKBUN_SECRETAPIKEY")
+PORKBUN_APIKEY = env("PORKBUN_APIKEY")
 
 from ..aws_config import *
